@@ -7,7 +7,7 @@ import { usePathname, useRouter } from 'next/navigation';
 
 const Navbar = () => {
     const pathname = usePathname();
-    const router = useRouter()
+    // const router = useRouter()
     const userData = authClient.useSession();
     // console.log(userData);
     const user = userData.data?.user;
@@ -15,8 +15,8 @@ const Navbar = () => {
     const handleSignOut = async () => {
         await authClient.signOut();
 
-        console.log('sing out');
-        router.refresh();
+        // console.log('sing out');
+        // router.refresh();
     }
 
 
