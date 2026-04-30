@@ -1,10 +1,26 @@
 'use client';
+import { authClient } from '@/lib/auth-client';
+import { Average } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 const Navbar = () => {
     const pathname = usePathname();
+    const router = useRouter()
+    const userData = authClient.useSession();
+    // console.log(userData);
+    const user = userData.data?.user;
+    // console.log(user);
+    const handleSignOut = async () => {
+        await authClient.signOut();
+
+        console.log('sing out');
+        router.refresh();
+    }
+
+
+
     const links = <>
         <li>
             <Link href="/"
@@ -58,12 +74,39 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-                <Link href={'/singin'}>
-                    <button className="btn bg-[#FD2951] text-white rounded-xl font-bold">singIn</button>
-                </Link>
-                <Link href={'/registration'}>
-                    <button className="btn bg-[#FD2951] text-white rounded-xl font-bold">registration</button>
-                </Link>
+                {
+                    !user && <>
+                        <Link href={'/singin'}>
+                            <button className="btn bg-[#FD2951] text-white rounded-xl font-bold">singIn</button>
+                        </Link>
+                        <Link href={'/registration'}>
+                            <button className="btn bg-[#FD2951] text-white rounded-xl font-bold">registration</button>
+                        </Link>
+                    </>
+                }
+                {
+                    user && (
+                        <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-amber-400">
+                                
+                                    <Image
+                                        src={user?.image}
+                                        alt={user?.name[0]}
+                                        width={40}
+                                        height={40}
+                                        className="object-cover rounded-full"
+                                    />
+                            </div>
+                            <button
+                                onClick={handleSignOut}
+                                className="btn bg-amber-400 hover:bg-amber-500 text-black text-sm px-3 py-1"
+                            >
+                                Logout
+                            </button>
+
+                        </div>
+                    )
+                }
             </div>
         </div>
     );
