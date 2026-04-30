@@ -13,6 +13,7 @@ const AnimalsCard = ({ cow }) => {
                     alt={cow.name}
                     className='rounded-xl'
                 />
+                <p className='btn btn-outline border-none text-[#FD2951] font-bold absolute right-2 top-2'>{cow.breed}</p>
             </div>
             <div className="card-body">
                 <h2 className="card-title">
@@ -25,6 +26,7 @@ const AnimalsCard = ({ cow }) => {
                     <div className="badge badge-outline">Products</div>
                 </div>
             </div>
+            <button className='btn bg-[#FD2951] text-white w-full rounded-xl'>all cow</button>
         </div>
     );
 };
