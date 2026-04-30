@@ -1,5 +1,6 @@
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 const AnimalsCard = ({ cow }) => {
 
@@ -9,7 +10,7 @@ const AnimalsCard = ({ cow }) => {
                 <Image
                     src={cow.image}
                     fill
-                     sizes="(max-width:668px) 100vw, (max-width:1200px)50vw,33vw"
+                    sizes="(max-width:668px) 100vw, (max-width:1200px)50vw,33vw"
                     alt={cow.name}
                     className='rounded-xl'
                 />
@@ -26,7 +27,9 @@ const AnimalsCard = ({ cow }) => {
                     <div className="badge badge-outline">Products</div>
                 </div>
             </div>
-            <button className='btn bg-[#FD2951] text-white w-full rounded-xl'>all cow</button>
+            <Link href={`/animals/${cow.id}`}>
+                <button className='btn bg-[#FD2951] text-white w-full rounded-xl'>all cow</button>
+            </Link>
         </div>
     );
 };
