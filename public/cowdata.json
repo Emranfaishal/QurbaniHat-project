@@ -10,7 +10,7 @@
         "location": "Bogura",
         "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural খাবার.",
         "image": "https://i.ibb.co.com/FbNGJQ0T/images.jpg",
-        "category": "Large Animal"
+        "category": "Large-Animal"
     },
     {
         "id": 2,
@@ -23,7 +23,7 @@
         "location": "Sirajganj",
         "description": "High milk producing cross breed cow with proper care.",
         "image": "https://i.ibb.co.com/TFY54gv/download.jpg",
-        "category": "Large Animal"
+        "category": "Large-Animal"
     },
     {
         "id": 3,
@@ -36,7 +36,7 @@
         "location": "Pabna",
         "description": "Premium Sahiwal breed known for milk and শক্ত শরীর.",
         "image": "https://i.ibb.co.com/JRytxQ3M/download-1.jpg",
-        "category": "Large Animal"
+        "category": "Large-Animal"
     },
     {
         "id": 4,
@@ -49,7 +49,7 @@
         "location": "Chattogram",
         "description": "Famous local breed with ভালো রোগ প্রতিরোধ ক্ষমতা.",
         "image": "https://i.ibb.co.com/nqHTQN5S/download-2.jpg",
-        "category": "Large Animal"
+        "category": "Large-Animal"
     },
     {
         "id": 5,
@@ -62,7 +62,7 @@
         "location": "Rajshahi",
         "description": "High butterfat milk producing Jersey cow.",
         "image": "https://i.ibb.co.com/mCDKKtVZ/images-1.jpg",
-        "category": "Large Animal"
+        "category": "Large-Animal"
     },
     {
         "id": 6,
@@ -75,7 +75,7 @@
         "location": "Dinajpur",
         "description": "Large size cow with very high milk production.",
         "image": "https://i.ibb.co.com/9HcMYfnx/download-3.jpg",
-        "category": "Large Animal"
+        "category": "Large-Animal"
     },
     {
         "id": 7,
@@ -88,7 +88,7 @@
         "location": "Mymensingh",
         "description": "দেশি গরু, প্রাকৃতিক খাবারে লালিত.",
         "image": "https://i.ibb.co.com/RTgRBZ3w/download-4.jpg",
-        "category": "Large Animal"
+        "category": "Large-Animal"
     },
     {
         "id": 8,
@@ -101,7 +101,7 @@
         "location": "Gazipur",
         "description": "Good milk production with affordable price.",
         "image": "https://i.ibb.co.com/9mMbM2Wf/download-5.jpg",
-        "category": "Large Animal"
+        "category": "Large-Animal"
     },
     {
         "id": 9,
@@ -114,7 +114,7 @@
         "location": "Rangpur",
         "description": "Strong cow with ভালো adaptability and milk yield.",
         "image": "https://i.ibb.co.com/nNkktQDF/download-6.jpg",
-        "category": "Large Animal"
+        "category": "Large-Animal"
     },
     {
         "id": 10,
@@ -127,7 +127,7 @@
         "location": "Khulna",
         "description": "Indian Gir breed, known for high milk quality.",
         "image": "https://i.ibb.co.com/sd299K37/images-2.jpg",
-        "category": "Large Animal"
+        "category": "Large-Animal"
     },
     {
         "id": 11,
@@ -140,7 +140,7 @@
         "location": "Natore",
         "description": "Well fattened cow, suitable for Qurbani.",
         "image": "https://i.ibb.co.com/rRh4nPFd/black-desi-cow.jpg",
-        "category": "Large Animal"
+        "category": "Large-Animal"
     },
     {
         "id": 12,
@@ -153,6 +153,6 @@
         "location": "Jessore",
         "description": "Hybrid cow with balanced milk production.",
         "image": "https://i.ibb.co.com/5xLHXvg5/images-3.jpg",
-        "category": "Large Animal"
+        "category": "Large-Animal"
     }
 ]
