@@ -1,11 +1,29 @@
+'use client';
+import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
+    const pathname = usePathname();
     const links = <>
         <li>
-            <Link href={'/'}>Home</Link>
-            
+            <Link href="/"
+                className={`text-sm font-bold ${pathname === '/' ? 'text-[#FD2951]' : ''}`}>
+                Home
+            </Link>
+        </li>
+        <li>
+            <Link href="/animals"
+                className={`text-sm font-bold ${pathname === '/animals' ? 'text-[#FD2951]' : ''}`}>
+                AllAnimals
+            </Link>
+        </li>
+        <li>
+            <Link href="/profile"
+                className={`text-sm font-bold ${pathname === '/profile' ? 'text-[#FD2951]' : ''}`}>
+                Profile
+            </Link>
+
         </li>
     </>
     return (
@@ -17,13 +35,20 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content">
                         {
                             links
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <a className="btn btn-ghost text-3xl font-bold text-[#FD2951]">
+                    <Image src={"/images.png"}
+                        alt="logo"
+                        loading="eager"
+                        width={35}
+                        height={35}
+                        className="object-cover h-auto w-auto"></Image>
+                    Qurbanihat</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -32,8 +57,13 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
+            <div className="navbar-end gap-3">
+                <Link href={'/singin'}>
+                    <button className="btn bg-[#FD2951] text-white rounded-xl font-bold">singIn</button>
+                </Link>
+                <Link href={'/registration'}>
+                    <button className="btn bg-[#FD2951] text-white rounded-xl font-bold">registration</button>
+                </Link>
             </div>
         </div>
     );
