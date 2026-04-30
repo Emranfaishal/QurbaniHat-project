@@ -13,7 +13,6 @@ const RegistrationPage = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        // ✅ validation
         if (!name || !email || !image || !password) {
             alert("All fields are required!");
             return;
@@ -38,11 +37,10 @@ const RegistrationPage = () => {
     };
 
     return (
-        <div className="p-4">
+        <div className="p-4 flex justify-center items-center">
             <form onSubmit={onSubmit}>
                 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-                    <legend className="fieldset-legend">Register</legend>
-
+                    <h2 className="text-2xl font-bold">Register</h2>
                     <label className="label">Name</label>
                     <input name="name" type="text" required className="input" placeholder="Your Name" />
 
