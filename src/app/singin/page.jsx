@@ -30,6 +30,11 @@ const SignInPage = () => {
             router.push("/");
         }
     };
+    const handleGoogleSignIn = async () => {
+        await authClient.signIn.social({
+            provider: 'google'
+        })
+    }
 
     return (
         <div className="p-4 flex justify-center items-center">
@@ -53,6 +58,9 @@ const SignInPage = () => {
                     <button type="submit" className="btn btn-neutral mt-4">
                         Login
                     </button>
+
+                    <p className="text-center text-xl font-bold">or</p>
+                    <button onClick={handleGoogleSignIn} className="btn w-full">sing in with google</button>
                 </fieldset>
             </form>
         </div>
