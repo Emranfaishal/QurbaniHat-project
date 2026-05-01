@@ -11,14 +11,14 @@ const Banner = () => {
         >
             <div className="hero-overlay"></div>
             <div className="hero-content text-neutral-content text-center">
-                <div className="max-w-md">
-                    <h1 className="mb-5 text-5xl font-bold">All Cow the</h1>
+                <div className="">
+                    <h1 className="mb-5 text-5xl font-bold">Make your Qurbani easy, safe and reliable.</h1>
                     <p className="mb-5">
-                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                        quasi. In deleniti eaque aut repudiandae et a id nisi.
+                        We are making the preparation of Qurbani easy, reliable and hassle-free during this holy time of Eid-ul-Azha.
+                        Every animal in our market is carefully raised, completely healthy and suitable for Qurbani according to Sharia.
                     </p>
                     <Link href={'/animals'}>
-                        <button className="btn border-none text-white bg-[#FD2951]">All Cow</button></Link>
+                        <button className="btn btn-outline btn-secondary text-white bg-[#FD2951]">All Animals</button></Link>
 
                 </div>
             </div>

@@ -88,22 +88,16 @@ const Navbar = () => {
                     user && (
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-amber-400">
-                                
-                                    <Image
-                                        src={user?.image}
-                                        alt={user?.name[0]}
-                                        width={40}
-                                        height={40}
-                                        className="object-cover rounded-full"
-                                    />
+                                <Image
+                                    src={user?.image}
+                                    alt={user?.name[0]}
+                                    width={40}
+                                    height={40}
+                                    className="object-cover rounded-full" />
                             </div>
-                            <button
-                                onClick={handleSignOut}
-                                className="btn bg-amber-400 hover:bg-amber-500 text-black text-sm px-3 py-1"
-                            >
-                                Logout
+                            <button onClick={handleSignOut}
+                                className="btn bg-amber-400 hover:bg-amber-500 text-black text-sm px-3 py-1">Logout
                             </button>
-
                         </div>
                     )
                 }

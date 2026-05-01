@@ -5,7 +5,7 @@ import Link from 'next/link';
 const AnimalsCard = ({ cow }) => {
 
     return (
-        <div className="card bg-base-100 w-96 shadow-lg p-5">
+        <div className="card bg-base-100 w-full shadow-lg p-5">
             <div className='relative w-full aspect-square'>
                 <Image
                     src={cow.image}
@@ -14,18 +14,21 @@ const AnimalsCard = ({ cow }) => {
                     alt={cow.name}
                     className='rounded-xl'
                 />
-                <p className='btn btn-outline border-none text-[#FD2951] font-bold absolute right-2 top-2'>{cow.breed}</p>
+                <div className="badge border-none text-white bg-gray-400 absolute right-2 top-2">Age : {cow.age}</div>
             </div>
             <div className="card-body">
-                <h2 className="card-title">
-                    Card Title
-                    <div className="badge badge-secondary">NEW</div>
+                <h2 className="card-title text-xl font-bold">
+                    {cow.name}
                 </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Fashion</div>
-                    <div className="badge badge-outline">Products</div>
+                <div className="card-actions">
+                    <div className="badge badge-outline text-red-500">Breed : {cow.breed}</div>  
+                    <div className="badge badge-outline text-pink-400">Weight : {cow.weight}</div>
+                    <div className="badge badge-outline text-green-600">Price : ${cow.price}</div>
+                    <div className="badge badge-outline text-blue-600">Location : {cow.location}</div>
+
                 </div>
+                <p className='text-gray-500'>{cow.description}</p>
+
             </div>
             <Link href={`/animals/${cow.id}`}>
                 <button className='btn bg-[#FD2951] text-white w-full rounded-xl'>all cow</button>
