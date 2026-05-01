@@ -1,6 +1,7 @@
 'use client';
 import { authClient } from '@/lib/auth-client';
 import { Average } from 'next/font/google';
+import { Avatar, Button } from "@heroui/react";
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -84,23 +85,21 @@ const Navbar = () => {
                         </Link>
                     </>
                 }
+
                 {
-                    user && (
-                        <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-amber-400">
-                                <Image
-                                    src={user?.image}
-                                    alt={user?.name[0]}
-                                    width={40}
-                                    height={40}
-                                    className="object-cover rounded-full" />
-                            </div>
-                            <button onClick={handleSignOut}
-                                className="btn bg-amber-400 hover:bg-amber-500 text-black text-sm px-3 py-1">Logout
-                            </button>
-                        </div>
-                    )
+                    user && <div className="flex justify-center items-center gap-3">
+                        <Avatar>
+                            <Avatar.Image alt="John Doe" className='w-15' src={user?.image} referrerPolicy="no-referrer" />
+                            <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+                        </Avatar>
+
+                        <button onClick={handleSignOut}
+                            className="btn bg-[#FD2951] text-white rounded-xl font-bold">Logout
+                        </button>
+                    </div>
                 }
+
+
             </div>
         </div>
     );
