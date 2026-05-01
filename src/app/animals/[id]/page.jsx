@@ -1,15 +1,79 @@
-
-
+// 'use client';
+import Image from "next/image";
+import Link from "next/link";
 const allCowDetailsPage = async ({ params }) => {
     const { id } = await params;
-    // console.log(id);
-    const res = await fetch('https://qurbani-hat-project.vercel.app/cowdata.json');
+    const res = await fetch('https://qurbani-hat-project.vercel.app/cowdata.json', { cache: 'no-store' });
     const cows = await res.json();
-    const cow=cows.find(c=>c.id==id);
-    console.log(cow);
+    const cow = cows.find(c => c.id == id);
+
     return (
-        <div>
-            <h2>{cow.name}</h2>
+        <div className='flex flex-col lg:flex-row gap-8 lg:gap-16 container mx-auto my-10 px-5 lg:px-0'>
+            <div className='w-full lg:w-1/2 flex justify-center items-center'>
+                <Image
+                    src={cow.image}
+                    width={400}
+                    height={400}
+                    className='w-full h-auto rounded-2xl shadow-md object-contain'
+                    alt={cow.title}
+                />
+            </div>
+            <div className='w-full lg:w-1/2 space-y-6'>
+
+
+
+                <div>
+                    <span className='px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-xs font-semibold uppercase'>
+                        {cow.name}
+                    </span>
+                    <h1 className='text-4xl font-bold text-[#0B1C30] mt-3'>{cow.description}</h1>
+                    <p className='text-gray-500 mt-2 font-medium'>Location: <span className='text-indigo-600'>{cow.location}</span></p>
+                </div>
+
+
+                <div className='flex items-center gap-2'>
+                    <span className='text-yellow-500 font-bold text-lg'>{cow.price}</span>
+                    <div className='flex text-yellow-400'> ★ ★ ★ ★ ★ </div>
+                    <span className='text-gray-400 text-sm'>(2.5k reviews)</span>
+                </div>
+
+
+                <p className='text-gray-600 leading-7 text-justify border-b pb-6'>
+                    {cow.type}
+                </p>
+
+
+                <div className='grid grid-cols-2 gap-4'>
+                    <div className='flex items-center gap-3'>
+                        <div className='p-2 bg-gray-100 rounded-lg'>{cow.breed}</div>
+                        <div>
+                            <p className='text-xs text-gray-400 uppercase'>weight</p>
+                            <p className='font-semibold'>{cow.weight}</p>
+                        </div>
+                    </div>
+                    <div className='flex items-center gap-3'>
+                        <div className='p-2 bg-gray-100 rounded-lg'>Location</div>
+                        <div>
+                            <p className='text-xs text-gray-400 uppercase'>Age :{cow.age}</p>
+                            <p className='font-semibold'>{cow.location}</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className='flex items-center justify-between pt-6'>
+                    <div>
+                        <p className='text-sm text-gray-400'>Course Price</p>
+                        <p className='text-3xl font-bold text-[#0B1C30]'>${cow.price}</p>
+                    </div>
+                    <Link href={'/animals'}>
+                        <button className='btn bg-[#FD2951] text-white w-full rounded-xl'>Success</button>
+                    </Link>
+                    {/* <button className='bg-[#3525CD] text-white px-10 py-4 rounded-xl font-bold hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200'>
+                        Enroll Now
+                    </button> */}
+                </div>
+            </div>
         </div>
     );
 };

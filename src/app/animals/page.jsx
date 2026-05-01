@@ -6,7 +6,7 @@ const allAnimalsPage = async () => {
     const cows = await res.json();
     return (
         <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center p-5 text-[#FD2951] mt-5">To Animals the cow</h2>
+            <h2 className="text-5xl font-bold text-center p-5 text-[#FD2951] mt-5">Online Qurbanihat Market</h2>
             <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-5">
                 {
                     cows.map(cow => <AnimalsCard key={cow.id} cow={cow}></AnimalsCard>)

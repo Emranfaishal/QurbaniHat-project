@@ -17,7 +17,7 @@ const AnimalsCard = ({ cow }) => {
                 <div className="badge border-none text-white bg-gray-400 absolute right-2 top-2">Age : {cow.age}</div>
             </div>
             <div className="card-body">
-                <h2 className="card-title text-xl font-bold">
+                <h2 className="card-title text-2xl font-bold">
                     {cow.name}
                 </h2>
                 <div className="card-actions">
@@ -31,7 +31,7 @@ const AnimalsCard = ({ cow }) => {
 
             </div>
             <Link href={`/animals/${cow.id}`}>
-                <button className='btn bg-[#FD2951] text-white w-full rounded-xl'>all cow</button>
+                <button className='btn bg-[#FD2951] text-white w-full rounded-xl'>Buy Now</button>
             </Link>
         </div>
     );
