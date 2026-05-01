@@ -12,7 +12,7 @@ const Banner = () => {
             <div className="hero-overlay"></div>
             <div className="hero-content text-neutral-content text-center">
                 <div className="">
-                    <h1 className="mb-5 text-5xl font-bold">Make your Qurbani easy, safe and reliable.</h1>
+                    <h1 className="mb-5 text-5xl font-bold">Make your Qurbani easy, safe and reliable</h1>
                     <p className="mb-5">
                         We are making the preparation of Qurbani easy, reliable and hassle-free during this holy time of Eid-ul-Azha.
                         Every animal in our market is carefully raised, completely healthy and suitable for Qurbani according to Sharia.

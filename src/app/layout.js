@@ -2,6 +2,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ToastContainer } from "react-toastify";
 
 const OutfitFont = Outfit({
   subsets: ["latin"],
@@ -19,10 +20,17 @@ export default function RootLayout({ children }) {
       data-theme="light"
       className={`${OutfitFont.className} h-full antialiased`}
     >
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+      </head>
       <body>
         <Navbar></Navbar>
         {children}
         <Footer></Footer>
+        <ToastContainer />
 
       </body>
     </html>

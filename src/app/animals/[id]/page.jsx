@@ -1,4 +1,5 @@
 // 'use client';
+import SuccessButton from "@/components/SuccessButton";
 import Image from "next/image";
 import Link from "next/link";
 const allCowDetailsPage = async ({ params }) => {
@@ -12,8 +13,8 @@ const allCowDetailsPage = async ({ params }) => {
             <div className='w-full lg:w-1/2 flex justify-center items-center'>
                 <Image
                     src={cow.image}
-                    width={400}
-                    height={400}
+                    width={350}
+                    height={350}
                     className='w-full h-auto rounded-2xl shadow-md object-contain'
                     alt={cow.title}
                 />
@@ -32,9 +33,9 @@ const allCowDetailsPage = async ({ params }) => {
 
 
                 <div className='flex items-center gap-2'>
-                    <span className='text-yellow-500 font-bold text-lg'>{cow.price}</span>
+                    <span className='text-yellow-500 font-bold text-lg'>$ {cow.price}</span>
                     <div className='flex text-yellow-400'> ★ ★ ★ ★ ★ </div>
-                    <span className='text-gray-400 text-sm'>(2.5k reviews)</span>
+                    <span className='text-gray-400 text-sm'>({cow.age}k reviews)</span>
                 </div>
 
 
@@ -51,11 +52,11 @@ const allCowDetailsPage = async ({ params }) => {
                             <p className='font-semibold'>{cow.weight}</p>
                         </div>
                     </div>
-                    <div className='flex items-center gap-3'>
-                        <div className='p-2 bg-gray-100 rounded-lg'>Location</div>
+                    <div className='flex items-center gap-5'>
+                        <div className='p-2 bg-gray-100 rounded-lg'>Category</div>
                         <div>
-                            <p className='text-xs text-gray-400 uppercase'>Age :{cow.age}</p>
-                            <p className='font-semibold'>{cow.location}</p>
+                            <p className='text-xs text-gray-400 uppercase'>Age</p>
+                            <p className='font-semibold'>{cow.age}</p>
                         </div>
                     </div>
                 </div>
@@ -66,12 +67,9 @@ const allCowDetailsPage = async ({ params }) => {
                         <p className='text-sm text-gray-400'>Course Price</p>
                         <p className='text-3xl font-bold text-[#0B1C30]'>${cow.price}</p>
                     </div>
-                    <Link href={'/animals'}>
-                        <button className='btn bg-[#FD2951] text-white w-full rounded-xl'>Success</button>
-                    </Link>
-                    {/* <button className='bg-[#3525CD] text-white px-10 py-4 rounded-xl font-bold hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200'>
-                        Enroll Now
-                    </button> */}
+                    <div>
+                        <SuccessButton></SuccessButton>
+                    </div>
                 </div>
             </div>
         </div>
