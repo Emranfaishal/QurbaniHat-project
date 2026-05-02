@@ -9,6 +9,8 @@ A modern livestock marketplace built for Qurbani season where users can browse a
 
 ---
 
+
+
 ## 📌 Project Purpose
 This project is built as an assignment to demonstrate:
 - Authentication system (Login/Register + Google login)
@@ -86,3 +88,19 @@ This project is built as an assignment to demonstrate:
     "category": "Large Animal"
   }
 ]
+
+📂 Project Structure
+
+qurbani-hat-project/
+│── public/
+│── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   └── utils/
+│── package.json
+│── README.md
+⚙️ Installation & Setup
+
+
+This project is deployed using Vercel.

@@ -1,7 +1,7 @@
 
 const TextCards = () => {
     return (
-        <div className="text-center bg-gray-400 p-20 space-y-5">
+        <div className="text-center p-20 space-y-5">
             <div className="text-[#FD2951]">
                 <h2 className="text-5xl font-bold">Islamic Touch</h2>
             </div>

@@ -47,12 +47,12 @@ const FeaturedAnimals = () => {
             </h2>
             <p className="text-center text-gray-400 mb-5">Preparing for Qurbani According to the Sunnah Join Us in the Joy of Worship Halal, Pure and Reliable Animals The Best Choice for the Pleasure of Allah</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
                 {
                     data.map(d => <div key={d.id}>
                         <div className="flex justify-center">
 
-                            <div className="card bg-base-100 w-full shadow-lg">
+                            <div className="card bg-base-100 w-full shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
 
                                 <figure className="relative w-full h-60">
                                     <Image
