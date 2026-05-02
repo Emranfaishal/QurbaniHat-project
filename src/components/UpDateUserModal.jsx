@@ -3,22 +3,24 @@
 import { authClient } from "@/lib/auth-client";
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
 import { BiEdit, BiUser } from "react-icons/bi";
+import { toast } from 'react-toastify';
 
 export function UpDateUserModal() {
     const onSubmit = async (e) => {
         e.preventDefault();
         const name = e.target.name.value;
         const image = e.target.url.value;
-        console.log({ name, image });
 
         await authClient.updateUser({
             name: name,
             image: url,
         });
         if (error) {
-            // console.error("Update failed:", error);
-            alert("Something went wrong!");
+            toast.error("Something went wrong!");
             return;
+        }
+        if (data) {
+            toast.success('success your account!');
         }
 
 

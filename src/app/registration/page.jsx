@@ -34,12 +34,12 @@ const RegistrationPage = () => {
         });
 
         if (error) {
-            toast("error.message!");
+            toast.error("Not Registration!");
             return;
         }
 
         if (data) {
-            toast("Registration successful!");
+            toast.success("Registration successful!");
             router.push('/');
         }
     };

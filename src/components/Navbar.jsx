@@ -1,7 +1,6 @@
 'use client';
 import { authClient } from '@/lib/auth-client';
-import { Average } from 'next/font/google';
-import { Avatar, Button } from "@heroui/react";
+import { Avatar } from "@heroui/react";
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -16,12 +15,7 @@ const Navbar = () => {
     const handleSignOut = async () => {
         await authClient.signOut();
 
-        // console.log('sing out');
-        // router.refresh();
     }
-
-
-
     const links = <>
         <li>
             <Link href="/"

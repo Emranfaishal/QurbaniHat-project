@@ -6,7 +6,7 @@ const SuccessButton = () => {
     const router = useRouter();
 
     const handleClick = () => {
-        toast("Booking Successful!");
+        toast.success("Booking Successful!");
         router.push('/animals');
     };
     return (

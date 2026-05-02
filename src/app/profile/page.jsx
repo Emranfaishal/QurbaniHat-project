@@ -5,6 +5,9 @@ import React from 'react';
 import { FaGraduationCap } from 'react-icons/fa';
 import { FaPencil } from 'react-icons/fa6';
 import { RiVerifiedBadgeFill } from 'react-icons/ri';
+import { toast } from 'react-toastify';
+
+
 
 const ProfilePage = () => {
     const userData = authClient.useSession();
@@ -21,11 +24,12 @@ const ProfilePage = () => {
             image: url,
         })
         if (error) {
-            alert("Something went wrong!");
+            toast.error('"Not add Profile!"');
             return;
         }
         if (data) {
-            alert('secme mas');
+            toast.success('"Success your Profile!"');
+
         }
 
     }
