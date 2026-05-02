@@ -9,13 +9,13 @@ const allCowDetailsPage = async ({ params }) => {
     const cow = cows.find(c => c.id == id);
 
     return (
-        <div className='flex flex-col lg:flex-row gap-8 lg:gap-16 container mx-auto my-10 px-5 lg:px-0'>
+        <div className='flex flex-col lg:flex-row gap-8 lg:gap-16 container mx-auto my-10 px-5 lg:px-10'>
             <div className='w-full lg:w-1/2 flex justify-center items-center'>
                 <Image
                     src={cow.image}
                     width={350}
                     height={350}
-                    className='w-full h-auto rounded-2xl shadow-md object-contain'
+                    className='w-full h-auto rounded-xl shadow-md object-contain'
                     alt={cow.title}
                 />
             </div>
@@ -40,7 +40,7 @@ const allCowDetailsPage = async ({ params }) => {
 
 
                 <p className='text-gray-600 leading-7 text-justify border-b pb-6'>
-                    {cow.type}
+                    {cow.type} : {cow.name}
                 </p>
 
 

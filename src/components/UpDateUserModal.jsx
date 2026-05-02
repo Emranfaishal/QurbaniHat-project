@@ -8,13 +8,18 @@ export function UpDateUserModal() {
     const onSubmit = async (e) => {
         e.preventDefault();
         const name = e.target.name.value;
-        const image = e.target.image.value;
+        const image = e.target.url.value;
         console.log({ name, image });
 
         await authClient.updateUser({
-            name,
-            image
+            name: name,
+            image: url,
         });
+        if (error) {
+            // console.error("Update failed:", error);
+            alert("Something went wrong!");
+            return;
+        }
 
 
     };

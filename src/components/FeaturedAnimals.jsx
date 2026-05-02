@@ -45,7 +45,7 @@ const FeaturedAnimals = () => {
             <h2 className="text-4xl font-bold text-center p-5 text-[#FD2951] mt-5">
                 Featured animals
             </h2>
-
+            <p className="text-center text-gray-400 mb-5">Preparing for Qurbani According to the Sunnah Join Us in the Joy of Worship Halal, Pure and Reliable Animals The Best Choice for the Pleasure of Allah</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 {

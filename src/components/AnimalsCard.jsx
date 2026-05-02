@@ -5,7 +5,7 @@ import Link from 'next/link';
 const AnimalsCard = ({ cow }) => {
 
     return (
-        <div className="card bg-base-100 w-full shadow-lg p-5">
+        <div className="card bg-base-100 w-full shadow-lg p-5 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className='relative w-full aspect-square'>
                 <Image
                     src={cow.image}
