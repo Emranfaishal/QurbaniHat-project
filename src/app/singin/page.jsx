@@ -3,6 +3,7 @@ import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { toast } from 'react-toastify';
 import { FaGoogle } from "react-icons/fa";
+import Link from "next/link";
 
 const SignInPage = () => {
     const router = useRouter();
@@ -63,6 +64,12 @@ const SignInPage = () => {
 
                     <p className="text-center text-xl font-bold">or</p>
                     <button onClick={handleGoogleSignIn} className="btn w-full bg-[#FD2951] rounded-xl text-white"><FaGoogle /> sing in with google</button>
+
+                    <div className="pt-5">
+                        <p className="text-sm text-[#464555]"> Donot have an account? <Link href={'/registration'}>
+                            <span className="font-bold text-[#FD2951] cursor-pointer">Register</span>
+                        </Link></p>
+                    </div>
                 </fieldset>
             </form>
         </div>

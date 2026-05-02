@@ -24,13 +24,10 @@ const ProfilePage = () => {
             image: url,
         })
         if (error) {
-            toast.error('"Not add Profile!"');
+            toast.error("Something went wrong!");
             return;
         }
-        if (data) {
-            toast.success('"Success your Profile!"');
-
-        }
+        toast.success("Profile Update Successfully");
 
     }
 
@@ -116,7 +113,9 @@ const ProfilePage = () => {
                         </p>
                     </div>
                     <div className='flex flex-col gap-3 sm:flex-row justify-between mt-5 items-center'>
-                        <button className='btn btn-outline w-full sm:w-auto'>Cancel Change</button>
+                        <button
+                            type='reset'
+                            className='btn btn-outline w-full sm:w-auto'>Reset</button>
                         <button
                             type='submit'
                             className='btn bg-[#FD2951] rounded-xl text-white w-full sm:w-auto'>Update Information</button>

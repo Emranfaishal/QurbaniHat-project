@@ -7,7 +7,7 @@ const TextCards = () => {
             </div>
 
 
-            <div className="join join-vertical bg-base-100  rounded-xl">
+            <div className="join join-vertical bg-base-100 space-y-4 gap-5 rounded-xl">
                 <div className="collapse collapse-arrow join-item border-base-300 border">
                     <input type="radio" name="my-accordion-4" defaultChecked />
                     <div className="collapse-title font-semibold">Big and catchy headlines</div>

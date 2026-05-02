@@ -1,25 +1,76 @@
+"use client"
+import bannerImg from "../../public/bannet.png"
+import Image from "next/image";
+import { easeInOut, motion } from "motion/react"
 import Link from "next/link";
 
 const Banner = () => {
     return (
-        <div
-            className="hero min-h-[60vh]"
-            style={{
-                backgroundImage:
-                    "url(https://i.ibb.co.com/r2DDxPsz/shutterstock-2482086361-1200x630.avif)",
-            }}
-        >
-            <div className="hero-overlay"></div>
-            <div className="hero-content text-neutral-content text-center">
-                <div className="">
-                    <h1 className="mb-5 text-5xl font-bold">Make your Qurbani easy, safe and reliable</h1>
-                    <p className="mb-5">
-                        We are making the preparation of Qurbani easy, reliable and hassle-free during this holy time of Eid-ul-Azha.
-                        Every animal in our market is carefully raised, completely healthy and suitable for Qurbani according to Sharia.
-                    </p>
-                    <Link href={'/animals'}>
-                        <button className="btn btn-outline btn-secondary text-white bg-[#FD2951]">All Animals</button></Link>
+        <div>
+            <div className='container mx-auto flex flex-col-reverse lg:flex-row justify-between my-10 lg:my-20'>
 
+                <motion.div
+                    initial={{ opacity: 0, x: 100, scale: 0.9 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 20,
+                        delay: 0.4
+                    }}
+                    className="w-full lg:w-1/2 p-3 lg:p-0 rounded-2xl shadow-2xl"
+                >
+                    <Image
+                        className="w-full h-auto rounded-2xl shadow lg:shadow-2xl object-cover hover:scale-105 transition-transform duration-700"
+                        src={bannerImg}
+                        width={800}
+                        height={600}
+                        alt="BannerImage" />
+                </motion.div>
+
+                <div className="space-y-6 lg:space-y-8 p-5 mt-10">
+
+                    <motion.p
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ ease: easeInOut, duration: 0.5 }}
+                        className="badge bg-[#E2DFFF] text-[#0F0069]"
+                    >
+                        EID AL-ADHA TEACHES US THAT IT IS POSSIBLE TO SACRIFICE
+                    </motion.p>
+
+                    <motion.h2
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ ease: easeInOut, delay: 0.2, duration: 0.6 }}
+                        className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B1C30]"
+                    >
+                        Make your Qurbani easy, safe
+                    </motion.h2>
+
+                    <motion.p
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ ease: easeInOut, delay: 0.3, duration: 0.6 }}
+                        className="text-[#464555]"
+                    >
+                        We are making the preparation of Qurbani easy, reliable and hassle-free during this holy time of <br /> Eid-ul-Azha.
+                        Every animal in our market is carefully raised, completely healthy and suitable for <br /> Qurbani according to Sharia.
+                    </motion.p>
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ ease: easeInOut, delay: 0.5, duration: 0.4 }}
+                    >
+                        <Link href={'/animals'}>
+                            <button className="btn btn-outline btn-secondary mr-5 text-white bg-[#FD2951]">All Animals</button></Link>
+                    </motion.div>
                 </div>
             </div>
         </div>
