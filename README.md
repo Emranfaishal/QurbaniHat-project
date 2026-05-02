@@ -24,7 +24,7 @@ This project is built as an assignment to demonstrate:
 
 ### 🏠 Home Page
 - Hero banner section with CTA button
-- Featured animals (4 items)
+- Featured animals (3 items)
 - Extra sections:
   - Qurbani Tips
   - Top Breeds
@@ -82,7 +82,7 @@ This project is built as an assignment to demonstrate:
     "age": 3,
     "location": "Bogura",
     "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural food.",
-    "image": "https://i.postimg.cc/example-cow1.jpg",
+    "image": "https://i.ibb.co.com/RTgRBZ3w/download-4.jpg",
     "category": "Large Animal"
   }
 ]
