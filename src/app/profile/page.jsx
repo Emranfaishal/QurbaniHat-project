@@ -118,7 +118,7 @@ const ProfilePage = () => {
                             className='btn btn-outline w-full sm:w-auto'>Reset</button>
                         <button
                             type='submit'
-                            className='btn bg-[#FD2951] rounded-xl text-white w-full sm:w-auto'>Update Information</button>
+                            className='btn bg-[#FD2951] rounded-xl text-white w-full sm:w-auto'><FaPencil />Update Information</button>
                     </div>
 
                 </form>

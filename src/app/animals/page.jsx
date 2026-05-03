@@ -1,7 +1,5 @@
 import AnimalsCard from "@/components/AnimalsCard";
 
-
-
 const allAnimalsPage = async () => {
     const res = await fetch('https://qurbani-hat-project.vercel.app/cowdata.json');
     const cows = await res.json();

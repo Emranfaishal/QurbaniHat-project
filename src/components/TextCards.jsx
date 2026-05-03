@@ -4,6 +4,7 @@ const TextCards = () => {
         <div className="text-center p-20 space-y-5">
             <div className="text-[#FD2951]">
                 <h2 className="text-5xl font-bold">Islamic Touch</h2>
+                <p className="text-gray-400 mt-3">Indeed, my prayer, my sacrifice, my life and my death are for Allah.</p>
             </div>
 
 

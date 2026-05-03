@@ -63,10 +63,10 @@ const SignInPage = () => {
                     </button>
 
                     <p className="text-center text-xl font-bold">or</p>
-                    <button onClick={handleGoogleSignIn} className="btn w-full bg-[#FD2951] rounded-xl text-white"><FaGoogle /> sing in with google</button>
+                    <button onClick={handleGoogleSignIn} className="btn w-full rounded-xl"><FaGoogle /> sing in with google</button>
 
                     <div className="pt-5">
-                        <p className="text-sm text-[#464555]"> Donot have an account? <Link href={'/registration'}>
+                        <p className="text-sm text-[#464555]"> Do not have an account? <Link href={'/registration'}>
                             <span className="font-bold text-[#FD2951] cursor-pointer">Register</span>
                         </Link></p>
                     </div>

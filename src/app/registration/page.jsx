@@ -68,7 +68,7 @@ const RegistrationPage = () => {
 
                     <p className="text-center text-xl font-bold">or</p>
 
-                    <button type="button" onClick={handleGoogle} className="btn w-full bg-[#FD2951] rounded-xl text-white">
+                    <button type="button" onClick={handleGoogle} className="btn w-full rounded-xl">
                        <FaGoogle /> Sign in with Google
                     </button>
                 </fieldset>
