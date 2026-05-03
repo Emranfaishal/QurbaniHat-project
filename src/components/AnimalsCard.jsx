@@ -16,15 +16,15 @@ const AnimalsCard = ({ cow }) => {
                 />
                 <div className="badge border-none text-white bg-gray-400 absolute right-2 top-2">Age : {cow.age}</div>
             </div>
-            <div className="card-body">
+            <div className="">
                 <h2 className="card-title text-2xl font-bold">
                     {cow.name}
                 </h2>
-                <div className="card-actions">
-                    <div className="badge badge-outline text-red-500">Breed : {cow.breed}</div>
-                    <div className="badge badge-outline text-pink-400">Weight : {cow.weight}</div>
-                    <div className="badge badge-outline text-green-600">Price : ${cow.price}</div>
-                    <div className="badge badge-outline text-blue-600">Location : {cow.location}</div>
+                <div>
+                    <div className="badge badge-outline mr-2 mb-2 text-red-500">Breed : {cow.breed}</div>
+                    <div className="badge badge-outline mr-2 mb-2 text-pink-400">Weight : {cow.weight}</div>
+                    <div className="badge badge-outline mr-2 mb-2 text-green-600">Price : ${cow.price}</div>
+                    <div className="badge badge-outline mr-2 mb-2 text-blue-600">Location : {cow.location}</div>
 
                 </div>
                 <p className='text-gray-500'>{cow.description}</p>

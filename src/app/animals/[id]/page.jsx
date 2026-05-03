@@ -19,7 +19,7 @@ const allCowDetailsPage = async ({ params }) => {
                     alt={cow.title}
                 />
             </div>
-            <div className='w-full lg:w-1/2 space-y-6'>
+            <div className='w-full lg:w-1/2 space-y-6 lg:mt-25'>
 
 
 
