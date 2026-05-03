@@ -62,20 +62,6 @@ This project is built as an assignment to demonstrate:
   - Update Name & Image
   - Uses `better-auth` update user system
 
-
-📂 Project Structure
-
-qurbanihat-project/
-│── public/
-│── src/
-│   ├── components/
-│   ├── pages/
-│   ├── assets/
-│   └── utils/
-│── package.json
-│── README.md
-⚙️ Installation & Setup
-
 ### ⚙️ Extra Features
 - Toast notifications
 - Loading spinner during data fetch
@@ -103,6 +89,18 @@ qurbanihat-project/
   }
 ]
 
+📂 Project Structure
+
+qurbani-hat-project/
+│── public/
+│── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   └── utils/
+│── package.json
+│── README.md
+⚙️ Installation & Setup
 
 
 This project is deployed using Vercel.
